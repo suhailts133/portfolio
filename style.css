@@ -27,7 +27,7 @@
 }
 
 .custom-service:hover{
-    background-color: #22223b;
+    background-color: #264653;
     box-shadow: 8px  5px 10px grey;
     color: white;
     transition: background-color 0.5s;
