@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description">
     <title>the web</title>
-    
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="style.css">
@@ -228,7 +227,7 @@
         </div>
         <div class="row justify-content-center my-5">
           <div class="col-lg-6">
-            <form ction="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
               <!--name label-->
               <input type="hidden" name="access_key" value="3b274fd6-c861-4c84-91db-175624183163">
               <label for="name" class="form-label">Name: </label>
@@ -237,7 +236,7 @@
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                 </svg></span>
                 <!--name input-->
-              <input type="text" id="name" placeholder="e.g.mario" class="form-control">
+              <input type="text" id="name" name="name" placeholder="topic" class="form-control">
 
               <span class="input-group-text">
                 <span  data-bs-placement="bottom" title="Your Name mate">
@@ -252,24 +251,39 @@
                   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                 </svg></span>
                 <!--email input-->
-                <input type="email" class="form-control" id="email" placeholder="e.g.mario@example.com">
+                <input type="email" name="email" class="form-control" id="email" placeholder="e.g.mario@example.com">
 
                 <span class="input-group-text">
                   <span  data-bs-placement="bottom" title="Enter your email address">
           
                   </span>
                 </span>
+              </div>
+              <!--subject label-->
+              <label for="subject" class="form-label">Subject: </label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text bg-slateGray"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                </svg></span>
+                <!--subject input-->
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="e.g.mario@example.com">
 
+                <span class="input-group-text">
+                  <span  data-bs-placement="bottom" title="Enter your email address">
+          
+                  </span>
+                </span>
               </div>
               
 
               <div class="form-floating mb-4 mt-5">
-                <textarea name="" id="query" class="form-control" style="height: 140px;"></textarea>
+                <textarea  id="query" name="message" class="form-control" style="height: 140px;"></textarea>
                 <label for="query" class="form-label">Your query...</label>
               </div>
 
               <div class="mb-4 text-center">
-                <button class="btn btn-sageGreen text-beige" type="submit">Submit</button>
+               
+                <button class="btn btn-navy text-white" onclick="sendMail()" type="submit">Submit</button>
               </div>
               
             </form>
