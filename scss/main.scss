@@ -1,0 +1,25 @@
+$primary: #c29938;
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+
+
+
+$custom-theme-colors: (
+    "slateGray":#22223b,
+    "sageGreen":#8fbc8f,
+    "beige":#f2e9e4,
+    "tan":#d2b48c,
+    "altlight":#f2ebfa,
+    "altdark":#522192,
+
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
